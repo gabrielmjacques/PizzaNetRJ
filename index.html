@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaNetRJ</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="row">
+            <h2>(21) 97070-7070</h2>
+            <h1>PizzaNetRJ</h1>
+
+            <div class="login">
+                <button>Cadastrar</button>
+                <button>Entrar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <button>Início</button>
+            <button>Cardápio</button>
+            <button>Localização</button>
+            <button>Contato</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="bg"></div>
+
+        <section class="mainContent">
+
+            <h1 class="welcome"></h1>
+            <h2>Acesse o <span style="text-decoration: underline;
+                ">Cardápio</span> Para Conferir nossas <strong>INCRÍVEIS</strong>
+                Pizzas</h2>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+    <script>
+        $(function ()
+        {
+
+            //Controle de Hora
+            let date = new Date()
+            let hour = date.getHours()
+            let welcome = $('.welcome')
+
+            if (hour >= 18)
+            {
+                welcome.text('O Que Vai Querer Nesta Noite?')
+            }
+            else if (hour >= 12)
+            {
+                welcome.text('O Que Vai Querer Nesta Tarde?')
+            }
+            else if (hour >= 6)
+            {
+                welcome.text('O Que Vai Querer Nesta Manhã?')
+            }
+            else
+            {
+                welcome.text('O Que Vai Querer Nesta Madrugada?')
+            }
+        })
+    </script>
+</body>
+
+</html>
