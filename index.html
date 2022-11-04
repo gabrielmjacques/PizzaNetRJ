@@ -16,20 +16,12 @@
     <header>
 
         <div class="row">
-            <h2>(21) 97070-7070</h2>
             <h1>PizzaNetRJ</h1>
 
             <div class="login">
                 <button>Cadastrar</button>
                 <button>Entrar</button>
             </div>
-        </div>
-
-        <div class="row">
-            <button>Início</button>
-            <button>Cardápio</button>
-            <button>Localização</button>
-            <button>Contato</button>
         </div>
 
     </header>
@@ -40,10 +32,100 @@
 
         <section class="mainContent">
 
-            <h1 class="welcome"></h1>
-            <h2>Acesse o <span style="text-decoration: underline;
-                ">Cardápio</span> Para Conferir nossas <strong>INCRÍVEIS</strong>
-                Pizzas</h2>
+            <div class="cardapio">
+
+                <h2>Cardápio</h2>
+
+                <div class="flavors">
+
+                    <div class="flavor">
+                        <img src="assets/calabresa.jpg" alt="">
+
+                        <h3 class="fName">Calabresa</h3>
+
+                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
+                        <div class="price">
+                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
+                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
+                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
+                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
+                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
+                        </div>
+
+                        <button>Comprar</button>
+                    </div>
+
+                    <div class="flavor">
+                        <img src="assets/frango-catupiry.jpg" alt="">
+
+                        <h3 class="fName">Frango com Catupiry</h3>
+
+                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
+                        <div class="price">
+                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
+                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
+                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
+                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
+                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
+                        </div>
+
+                        <button>Comprar</button>
+                    </div>
+
+                    <div class="flavor">
+                        <img src="assets/muzzarela.jpeg" alt="">
+
+                        <h3 class="fName">Mussarela</h3>
+
+                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
+                        <div class="price">
+                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
+                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
+                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
+                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
+                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
+                        </div>
+
+                        <button>Comprar</button>
+                    </div>
+
+                    <div class="flavor">
+                        <img src="assets/portuguesa.jpg" alt="">
+
+                        <h3 class="fName">Portuguesa</h3>
+
+                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
+                        <div class="price">
+                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
+                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
+                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
+                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
+                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
+                        </div>
+
+                        <button>Comprar</button>
+                    </div>
+
+                    <div class="flavor">
+                        <img src="assets/presunto.jpg" alt="">
+
+                        <h3 class="fName">Presunto</h3>
+
+                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
+                        <div class="price">
+                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
+                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
+                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
+                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
+                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
+                        </div>
+
+                        <button>Comprar</button>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
     </main>
@@ -52,35 +134,6 @@
 
     </footer>
 
-
-
-    <script>
-        $(function ()
-        {
-
-            //Controle de Hora
-            let date = new Date()
-            let hour = date.getHours()
-            let welcome = $('.welcome')
-
-            if (hour >= 18)
-            {
-                welcome.text('O Que Vai Querer Nesta Noite?')
-            }
-            else if (hour >= 12)
-            {
-                welcome.text('O Que Vai Querer Nesta Tarde?')
-            }
-            else if (hour >= 6)
-            {
-                welcome.text('O Que Vai Querer Nesta Manhã?')
-            }
-            else
-            {
-                welcome.text('O Que Vai Querer Nesta Madrugada?')
-            }
-        })
-    </script>
 </body>
 
 </html>

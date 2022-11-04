@@ -42,18 +42,13 @@ header h1 {
     font-family: secular;
 
     font-size: 2.5em;
+    margin-left: 40px;
 
     text-shadow: var(--cor1) 0 5px;
 }
 
-header h2,
-.login {
+header .login {
     position: absolute;
-}
-
-header h2 {
-    left: 40px;
-    font-size: 1.2em;
 }
 
 header .login {
@@ -64,11 +59,7 @@ header .login {
     display: flex;
     flex-direction: row;
     width: fit-content;
-    margin: auto;
-    justify-content: center;
     align-items: center;
-
-    margin-bottom: 10px;
 }
 
 header button {
@@ -88,10 +79,8 @@ header button:active {
     background-color: #dc143cc0;
 }
 
-
-
 .bg {
-    background-image: url('assets/img4.jpg');
+    background-image: url('assets/bg.jpg');
     background-position: center;
     background-size: cover;
 
@@ -102,10 +91,13 @@ section {
     margin: auto;
 }
 
+
+
 .mainContent {
     background-color: var(--cor2);
     color: white;
     text-align: center;
+    font-weight: bolder;
 
     width: 100%;
     padding: 50px;
@@ -113,7 +105,103 @@ section {
     box-shadow: inset #00000044 0 0 40px;
 }
 
-.welcome {
-    font-size: 2em;
-    margin-bottom: 40px;
+.mainContent h2 {
+    text-decoration: underline;
+
+    font-size: 2.7em;
+    margin-bottom: 30px;
+}
+
+.flavors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flavor {
+    background-color: white;
+    color: black;
+
+    width: 400px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+.flavor img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+}
+
+.flavor h3 {
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.flavor .price {
+    text-align: left;
+    font-weight: lighter;
+
+    font-size: 1.2em;
+}
+
+.flavor .price .value {
+    color: var(--cor1);
+    font-weight: bold;
+}
+
+.flavor button {
+    background-color: transparent;
+    color: white;
+
+    height: 30px;
+    margin: 10px auto;
+    padding: 5px 30px;
+}
+
+.flavor:hover button {
+    background-color: var(--cor1);
+
+}
+
+.flavor:hover button:hover {
+    background-color: #c00f32;
+
+    height: 30px;
+}
+
+.flavor:hover button:active {
+    background-color: #a50e2c;
+
+    height: 30px;
+}
+
+
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5em;
+        margin-left: 20px;
+    }
+
+    header button {
+        font-size: 1em;
+    }
+
+    .mainContent {
+        padding: 0;
+    }
+
+    .mainContent h2 {
+        font-size: 2em;
+    }
+
+    .flavor img {
+        width: 80%;
+        height: 200px;
+    }
+
 }
