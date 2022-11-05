@@ -110,6 +110,7 @@ section {
 
     font-size: 2.7em;
     padding: 20px;
+    margin-top: 50px;
 }
 
 .flavors {
@@ -179,6 +180,33 @@ section {
     height: 30px;
 }
 
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    width: 75vw;
+}
+
+.contacts img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #0000003b;
+    margin: auto;
+
+    font-size: 1.2em;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
 
 
 @media (max-width: 500px) {
@@ -203,5 +231,10 @@ section {
         width: 80%;
         height: 200px;
     }
+
+    .contacts {
+        width: 100vw;
+    }
+
 
 }
