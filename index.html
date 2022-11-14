@@ -16,7 +16,7 @@
     <header>
 
         <div class="row">
-            <h1>PizzaNetRJ</h1>
+            <img src="assets/logo.png" alt="">
 
             <div class="login">
                 <a href="html/signin.html"><button>Cadastrar</button></a>
@@ -27,129 +27,44 @@
     </header>
 
     <main>
+        <section class="cepCard">
 
-        <button class="cart">
-            <img src="assets/icons/shopping-cart.png" alt="">
-        </button>
+            <div class="cepMenu">
 
-        <div class="bg"></div>
-
-        <section class="mainContent">
-
-            <div class="cardapio">
-
-                <h2>Cardápio</h2>
-
-                <div class="flavors">
-
-                    <div class="flavor">
-                        <img src="assets/flavors/calabresa.jpg" alt="">
-
-                        <h3 class="fName">Calabresa</h3>
-
-                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
-                        <div class="price">
-                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
-                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
-                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
-                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
-                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
-                        </div>
-
-                        <button>Comprar</button>
-                    </div>
-
-                    <div class="flavor">
-                        <img src="assets/flavors/frango-catupiry.jpg" alt="">
-
-                        <h3 class="fName">Frango com Catupiry</h3>
-
-                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
-                        <div class="price">
-                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
-                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
-                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
-                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
-                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
-                        </div>
-
-                        <button>Comprar</button>
-                    </div>
-
-                    <div class="flavor">
-                        <img src="assets/flavors/muzzarela.jpeg" alt="">
-
-                        <h3 class="fName">Mussarela</h3>
-
-                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
-                        <div class="price">
-                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
-                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
-                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
-                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
-                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
-                        </div>
-
-                        <button>Comprar</button>
-                    </div>
-
-                    <div class="flavor">
-                        <img src="assets/flavors/portuguesa.jpg" alt="">
-
-                        <h3 class="fName">Portuguesa</h3>
-
-                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
-                        <div class="price">
-                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
-                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
-                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
-                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
-                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
-                        </div>
-
-                        <button>Comprar</button>
-                    </div>
-
-                    <div class="flavor">
-                        <img src="assets/flavors/presunto.jpg" alt="">
-
-                        <h3 class="fName">Presunto</h3>
-
-                        <p style="text-align: left; font-size: 1.2em;">Preços:</p>
-                        <div class="price">
-                            <p>Brotinho (15cm) - <span class="value">R$9.99</span></p>
-                            <p>Pequena (20cm) - <span class="value">R$14.99</span></p>
-                            <p>Média (25cm) - <span class="value">R$19.99</span></p>
-                            <p>Grande (30cm) - <span class="value">R$24.99</span></p>
-                            <p>Família (40cm) - <span class="value">R$34.99</span></p>
-                        </div>
-
-                        <button>Comprar</button>
-                    </div>
-
+                <div class="cepBtns">
+                    <button id="cepBtn1">Delivery</button>
+                    <button id="cepBtn2">Retirada</button>
                 </div>
 
+                <div class="cep cepD">
+                    <p>Onde você quer que sua pizza seja entregue?</p>
 
-                <h2>Redes Sociais</h2>
+                    <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
+                    <input type="number" name="cep" id="cepN" placeholder="Insira seu CEP aqui">
+                    <input type="number" name="number" id="number" placeholder="Informe o número da casa/prédio">
+                    <button>Buscar</button>
+                </div>
 
-                <div class="contacts">
+                <div class="cep cepR" style="display: none;">
+                    <p>Diga onde você mora para encontrar uma de nossas unidade nas proximidades</p>
 
-                    <div class="contact">
-                        <img src="assets/icons/whatsapp.png" alt="Whatsapp">
-                        <span>(21) 97070-7070</span>
-                    </div>
-                    <div class="contact">
-                        <img src="assets/icons/facebook.png" alt="Facebook">
-                        <span>PizzaNetRJ</span>
-                    </div>
-                    <div class="contact">
-                        <img src="assets/icons/instagram.png" alt="Facebook">
-                        <span>@pizzanetrj</span>
-                    </div>
-
+                    <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
+                    <input type="number" name="cep" id="cepNumber" placeholder="Insira seu CEP aqui">
+                    <button>Buscar</button>
                 </div>
 
             </div>
+
+        </section>
+
+        <section class="menuCard">
+
+            <div class="banners">
+                <img src="assets/banner1.png" alt="">
+                <img src="assets/banner2.png" alt="">
+            </div>
+
+            <button>Ver Cardápio</button>
 
         </section>
     </main>
@@ -158,6 +73,43 @@
 
     </footer>
 
+
+    <script>
+        $(function ()
+        {
+
+            /*MENU PARA ESCOLHER ENTRE DELIVERY E RETIRADA*/
+            let cepBtn1 = $('#cepBtn1')
+            let cepBtn2 = $('#cepBtn2')
+            let cepD = $('.cepD')
+            let cepR = $('.cepR')
+
+            cepBtn1.addClass('cepBtnSelected')
+            cepBtn2.removeClass('cepBtnSelected')
+
+            cepD.css('display', 'block')
+            cepR.css('display', 'none')
+
+            cepBtn1.click(() =>
+            {
+                cepBtn1.addClass('cepBtnSelected')
+                cepBtn2.removeClass('cepBtnSelected')
+
+                cepD.css('display', 'block')
+                cepR.css('display', 'none')
+            })
+
+            cepBtn2.click(() =>
+            {
+                cepBtn1.removeClass('cepBtnSelected')
+                cepBtn2.addClass('cepBtnSelected')
+
+                cepD.css('display', 'none')
+                cepR.css('display', 'block')
+            })
+
+        })
+    </script>
 </body>
 
 </html>

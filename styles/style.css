@@ -22,6 +22,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    background-color: var(--cor2);
 }
 
 button {
@@ -38,16 +39,12 @@ header {
     background-color: var(--cor2);
     color: white;
 
-    padding: 15px;
+    padding: 0px;
 }
 
-header h1 {
-    font-family: secular;
-
-    font-size: 2.5em;
+header img {
+    width: 150px;
     margin-left: 40px;
-
-    text-shadow: var(--cor1) 0 5px;
 }
 
 header .login {
@@ -79,167 +76,131 @@ header button:active {
     background-color: #dc143cc0;
 }
 
-.bg {
-    background-image: url('../assets/bg.jpg');
-    background-position: center;
-    background-size: cover;
-
-    height: 55vh;
-}
-
 section {
     margin: auto;
 }
 
 
-
-.mainContent {
-    background-color: var(--cor2);
+section {
     color: white;
     text-align: center;
     font-weight: bolder;
+    position: relative;
 
-    width: 100%;
+    width: 100vw;
+    height: 70vh;
     padding: 50px;
 
     box-shadow: inset #00000044 0 0 40px;
 }
 
-.cart {
-    background-color: var(--cor1);
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 60px;
-    height: 60px;
-    right: 5vw;
-    bottom: 5vh;
-    border-radius: 100%;
+.cepCard {
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.cart:hover {
-    background-color: #c00f32;
-}
-
-.cart img {
-    width: 70%;
-    padding-right: 2px;
-
-    filter: opacity(0.5);
-}
-
-.cart:hover img {
-    filter: opacity(1);
-}
-
-.mainContent h2 {
-    text-decoration: underline;
-
-    font-size: 2.7em;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.flavors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.flavor {
+.cepMenu {
     background-color: white;
-    color: black;
+    color: #000000b0;
+    margin: auto;
 
-    width: 350px;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
+    max-width: 600px;
+    border-radius: 0 0 20px 20px;
 }
 
-.flavor img {
+.cepMenu p {
+    text-align: center;
+
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.cepBtns {
+    display: flex;
     width: 100%;
-    height: 250px;
-    border-radius: 20px 20px 0 0;
 }
 
-.flavor h3 {
-    font-size: 1.5em;
-    padding: 5px;
+.cepBtns button {
+    width: 100%;
+    margin: 0;
+    font-size: 1.3em;
+    padding: 20px;
 }
 
-.flavor .price {
+.cep {
     text-align: left;
-    font-weight: lighter;
 
-    font-size: 1.2em;
+    padding: 20px;
 }
 
-.flavor .price .value {
-    color: var(--cor1);
-    font-weight: bold;
-}
-
-.flavor button {
-    background-color: transparent;
-    color: white;
-
-    height: 30px;
-    margin: 10px auto;
-    padding: 5px 30px;
-}
-
-.flavor:hover button {
-    background-color: var(--cor1);
-
-}
-
-.flavor:hover button:hover {
-    background-color: #c00f32;
-
-    height: 30px;
-}
-
-.flavor:hover button:active {
-    background-color: #a50e2c;
-
-    height: 30px;
-}
-
-.contacts {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-
-    width: 75vw;
-}
-
-.contacts img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: #0000003b;
-    margin: auto;
-
-    font-size: 1.2em;
-    width: 300px;
+.cep input {
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
     padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 5px;
+}
+
+.cep button {
+    background-color: crimson;
+    color: white;
+    margin: auto;
+    font-weight: bolder;
+
+    width: 100%;
+}
+
+.cep button:hover {
+    background-color: #b11030;
+}
+
+
+
+.menuCard .banners {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.menuCard img {
+    width: 50vw;
+    margin: auto;
+}
+
+.menuCard button {
+    background-color: crimson;
+    color: white;
+    font-weight: bolder;
+
+    width: 85%;
+    font-size: 1.5em;
+    margin: 30px auto;
+}
+
+/*CLASSES DE ADIÇÃO*/
+.cepBtnSelected {
+    position: relative;
+    color: crimson;
+    background-color: white;
+}
+
+.cepBtnSelected::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+
+    width: 100%;
+    height: 20%;
+    left: 0;
+    top: -20%;
+    border-radius: 20px 20px 0 0;
 }
 
 
 @media (max-width: 500px) {
-    header h1 {
-        font-size: 1.3em;
+    header img {
+        width: 100px;
         margin-left: 10px;
     }
 
@@ -252,25 +213,19 @@ section {
         font-size: 0.8em;
     }
 
-    .mainContent {
+    .cepCard {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .mainContent h2 {
+    .cepCard h2 {
         font-size: 2em;
     }
 
-    .flavor img {
-        object-fit: cover;
 
-        width: 100%;
-        height: 200px;
+
+    .menuCard .banners {
+        display: flex;
+        flex-direction: column;
     }
-
-    .contacts {
-        width: 100vw;
-    }
-
-
 }
