@@ -6,11 +6,13 @@
     --cor5: #BF3617;
 }
 
+body {
+    overflow-y: hidden;
+}
 
 main {
     background-color: white;
     display: flex;
-    overflow-y: hidden;
 
     height: 100vh;
 }
