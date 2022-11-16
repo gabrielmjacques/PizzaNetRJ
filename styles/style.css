@@ -7,7 +7,7 @@
 }
 
 :root {
-    --cor1: crimson;
+    --cor1: #dc143c;
     --cor2: #222326;
     --cor3: #3E5902;
     --cor4: #F2A74B;
@@ -21,8 +21,22 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
     background-color: var(--cor2);
+    overflow-x: hidden;
+}
+
+.redBtn {
+    background-color: var(--cor1);
+    color: white;
+}
+
+.redBtn:hover {
+    background-color: #af0e2f;
+}
+
+a {
+    color: crimson;
+    text-decoration: none;
 }
 
 button {
@@ -35,31 +49,29 @@ button {
     transition: 0.3s;
 }
 
-header {
+.row {
     background-color: var(--cor2);
     color: white;
-
-    padding: 0px;
-}
-
-header img {
-    width: 150px;
-    margin-left: 40px;
-}
-
-header .login {
-    position: absolute;
-    right: 40px;
-}
-
-.row {
     display: flex;
     flex-direction: row;
     width: fit-content;
     align-items: center;
+
+    padding: 10px;
+    width: 100%;
 }
 
-header button {
+.row img {
+    width: 170px;
+    margin-left: 40px;
+}
+
+.row .login {
+    position: absolute;
+    right: 40px;
+}
+
+.row button {
     color: white;
     background-color: transparent;
     font-weight: bolder;
@@ -67,18 +79,15 @@ header button {
     font-size: 1.1em;
 }
 
-header button:hover {
+.row button:hover {
     background: var(--cor1);
     transform: scale(1.08);
 }
 
-header button:active {
+.row button:active {
     background-color: #dc143cc0;
 }
 
-section {
-    margin: auto;
-}
 
 
 section {
@@ -88,7 +97,6 @@ section {
     position: relative;
 
     width: 100vw;
-    height: 70vh;
     padding: 50px;
 
     box-shadow: inset #00000044 0 0 40px;
@@ -98,6 +106,8 @@ section {
     background-image: url('../assets/bg.jpg');
     background-size: cover;
     background-position: center;
+
+    height: 500px;
 }
 
 .cepMenu {
@@ -107,6 +117,8 @@ section {
 
     max-width: 600px;
     border-radius: 0 0 20px 20px;
+
+    box-shadow: #000000c2 0 10px 30px;
 }
 
 .cepMenu p {
@@ -142,41 +154,68 @@ section {
 }
 
 .cep button {
-    background-color: crimson;
-    color: white;
     margin: auto;
     font-weight: bolder;
 
     width: 100%;
 }
 
-.cep button:hover {
-    background-color: #b11030;
+
+
+.containerBanners {
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-.menuCard .banners {
+.bannersCard .banners {
     display: flex;
     justify-content: center;
 
     gap: 20px;
 }
 
-.menuCard img {
-    width: 50vw;
+.bannersCard img {
+    width: 45vw;
     margin: auto;
 }
 
-.menuCard button {
+.bannersCard button {
     background-color: crimson;
     color: white;
     font-weight: bolder;
 
-    width: 85%;
+    width: 100%;
     font-size: 1.5em;
     margin: 30px auto;
 }
+
+
+
+footer {
+    background-color: black;
+    color: white;
+
+    padding: 30px;
+}
+
+footer hr {
+    margin: 20px auto;
+}
+
+.footerBlocks {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+
+.footerBlock h4 {
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
 
 /*CLASSES DE ADIÇÃO*/
 .cepBtnSelected {
@@ -199,17 +238,17 @@ section {
 
 
 @media (max-width: 500px) {
-    header img {
+    .row img {
         width: 100px;
         margin-left: 10px;
     }
 
-    header .login {
+    .row .login {
         position: absolute;
         right: 10px;
     }
 
-    header button {
+    .row button {
         font-size: 0.8em;
     }
 
@@ -223,9 +262,17 @@ section {
     }
 
 
+    .bannersCard {
+        padding: 0;
+        padding-top: 20px;
+    }
 
-    .menuCard .banners {
+    .bannersCard .banners {
         display: flex;
         flex-direction: column;
+    }
+
+    .bannersCard img {
+        width: 100%;
     }
 }

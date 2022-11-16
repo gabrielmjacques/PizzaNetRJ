@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - PizzaNet RJ</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <div class="content">
+
+            <div class="row">
+                <img src="../assets/logo.png" alt="">
+            </div>
+
+            <nav>
+                <div class="rowMenu">
+                    <button class="menuBtnSelected" id="rowMenuBtn1">PIZZAS</button>
+                    <button id="rowMenuBtn2">SOBREMESAS</button>
+                </div>
+            </nav>
+
+            <div class="pizzas">
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/pizzas/calabresa.jpg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Calabresa</h4>
+                        <p>
+                            Deliciosas fatias de calabresa acompanhadas de cebola, azeitonas verdes e queijo
+                        </p>
+                        <label for="sizes">Selecione o tamanho</label>
+                        <select name="sizes" id="">
+                            <option value="15">Brotinho - 15cm</option>
+                            <option value="20">Pequena - 20cm</option>
+                            <option value="25">Média - 25cm</option>
+                            <option value="30">Grande - 30cm</option>
+                            <option value="40">Família - 40cm</option>
+                        </select>
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/pizzas/frango-catupiry.jpg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Frango com Catupiry</h4>
+                        <p>
+                            Frango, queijo mussarela e catupiry cremoso
+                        </p>
+                        <label for="sizes">Selecione o tamanho</label>
+                        <select name="sizes" id="">
+                            <option value="15">Brotinho - 15cm</option>
+                            <option value="20">Pequena - 20cm</option>
+                            <option value="25">Média - 25cm</option>
+                            <option value="30">Grande - 30cm</option>
+                            <option value="40">Família - 40cm</option>
+                        </select>
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/pizzas/muzzarela.jpeg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Mussarela</h4>
+                        <p>
+                            Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano
+                        </p>
+                        <label for="sizes">Selecione o tamanho</label>
+                        <select name="sizes" id="">
+                            <option value="15">Brotinho - 15cm</option>
+                            <option value="20">Pequena - 20cm</option>
+                            <option value="25">Média - 25cm</option>
+                            <option value="30">Grande - 30cm</option>
+                            <option value="40">Família - 40cm</option>
+                        </select>
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/pizzas/portuguesa.jpg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Portuguesa</h4>
+                        <p>
+                            Molho de tomate, queijo mussarela, tiras de presunto, cebola e azeitonas verdes cobertas com
+                            cream cheese
+                        </p>
+                        <label for="sizes">Selecione o tamanho</label>
+                        <select name="sizes" id="">
+                            <option value="15">Brotinho - 15cm</option>
+                            <option value="20">Pequena - 20cm</option>
+                            <option value="25">Média - 25cm</option>
+                            <option value="30">Grande - 30cm</option>
+                            <option value="40">Família - 40cm</option>
+                        </select>
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/pizzas/presunto.jpg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Presunto</h4>
+                        <p>
+                            Deliciosa pizza coberta com tiras de presunto e queijo mussarela
+                        </p>
+                        <label for="sizes">Selecione o tamanho</label>
+                        <select name="sizes" id="">
+                            <option value="15">Brotinho - 15cm</option>
+                            <option value="20">Pequena - 20cm</option>
+                            <option value="25">Média - 25cm</option>
+                            <option value="30">Grande - 30cm</option>
+                            <option value="40">Família - 40cm</option>
+                        </select>
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sobremesas" style="display: none;">
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/sobremesas/boloMorango.png" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Bolo de Chocolate</h4>
+                        <p>
+                            Uma fatia do nosso bolo de chocolate especial com pedaços de morango
+                        </p>
+
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/sobremesas/churros.jpeg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Mini Churros</h4>
+                        <p>
+                            Porção com 10 mini-churros crocantes recheados com doce de leite
+                        </p>
+
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/sobremesas/petitGateau.jpeg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Petit Gateau</h4>
+                        <p>
+                            Pedaço do nosso delicioso brownie com duas bolos de sorvete de creme e calda de chocolate
+                        </p>
+
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+                <div class="menuOptionCard">
+                    <div class="menuOptionCardImage">
+                        <img src="../assets/menu/sobremesas/pudim.jpg" alt="">
+                    </div>
+
+                    <div class="menuOptionCardInfo">
+                        <h4>Pudim</h4>
+                        <p>
+                            Se você gosta de pudim, precisa experimentar o nosso maravilhoso pudim de leite especial
+                        </p>
+
+                        <button class="redBtn">Adicionar - R$00,00</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cart">
+
+            <h2>Seu Carrinho</h2>
+
+            <hr>
+
+            <p class="empty">Seu carrinho está vazio</p>
+
+            <p class="tax">Taxa de entrega: R$00,00</p>
+
+            <button>Concluir Pedido</button>
+
+        </div>
+
+    </main>
+
+    <script>
+        /*MENU PARA TROCAR ENTRE AS ABAS*/
+        $(function ()
+        {
+            let rowMenuBtn1 = $('#rowMenuBtn1')
+            let rowMenuBtn2 = $('#rowMenuBtn2')
+            let pizzas = $('.pizzas')
+            let sobremesas = $('.sobremesas')
+
+            rowMenuBtn1.click(() =>
+            {
+                rowMenuBtn1.addClass('menuBtnSelected')
+                rowMenuBtn2.removeClass('menuBtnSelected')
+
+                pizzas.css('display', 'flex')
+                sobremesas.css('display', 'none')
+            })
+            rowMenuBtn2.click(() =>
+            {
+                rowMenuBtn1.removeClass('menuBtnSelected')
+                rowMenuBtn2.addClass('menuBtnSelected')
+
+                pizzas.css('display', 'none')
+                sobremesas.css('display', 'flex')
+            })
+        })
+    </script>
+</body>
+
+</html>

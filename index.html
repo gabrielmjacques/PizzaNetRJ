@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaNetRJ</title>
+    <title>PizzaNet RJ</title>
 
     <link rel="stylesheet" href="styles/style.css">
     <script src="jquery.js"></script>
@@ -22,6 +22,7 @@
                 <a href="html/signin.html"><button>Cadastrar</button></a>
                 <a href="html/login.html"><button>Entrar</button></a>
             </div>
+
         </div>
 
     </header>
@@ -40,45 +41,78 @@
                     <p>Onde você quer que sua pizza seja entregue?</p>
 
                     <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
-                    <input type="number" name="cep" id="cepN" placeholder="Insira seu CEP aqui">
-                    <input type="number" name="number" id="number" placeholder="Informe o número da casa/prédio">
-                    <button>Buscar</button>
+                    <input type="number" name="cep" id="cepDInput1" placeholder="Insira seu CEP aqui">
+                    <p style="text-align: left; font-size: 0.8em; color: crimson; display: none;" id="cepWarning1">O
+                        CEP parece estar incompleto</p>
+
+                    <input type="number" name="number" id="cepDInput2" placeholder="Informe o número da casa/prédio">
+                    <button id="buscarBtn1">Buscar</button>
                 </div>
 
                 <div class="cep cepR" style="display: none;">
                     <p>Diga onde você mora para encontrar uma de nossas unidade nas proximidades</p>
 
                     <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
-                    <input type="number" name="cep" id="cepNumber" placeholder="Insira seu CEP aqui">
-                    <button>Buscar</button>
+                    <input type="number" name="cep" id="cepRInput" placeholder="Insira seu CEP aqui">
+                    <p style="text-align: left; font-size: 0.8em; color: crimson; display: none;" id="cepWarning2">O
+                        CEP parece estar incompleto</p>
+
+                    <button id="buscarBtn2">Buscar</button>
                 </div>
 
             </div>
 
         </section>
 
-        <section class="menuCard">
+        <section class="bannersCard">
 
-            <div class="banners">
-                <img src="assets/banner1.png" alt="">
-                <img src="assets/banner2.png" alt="">
+            <div class="containerBanners">
+                <div class="banners">
+                    <img src="assets/banner1.png" alt="">
+                    <img src="assets/banner2.png" alt="">
+                </div>
+                <a href="html/menu.html"><button>Ver Cardápio</button></a>
             </div>
-
-            <button>Ver Cardápio</button>
 
         </section>
     </main>
 
     <footer>
+        <p>Copyright © @2022 PIZZANETRJ LTDA. AVENIDA SUPER FAMOSA TAL Nº: 7070 – TIJUCA – RIO DE JANEIRO/RJ. Todos
+            os direitos reservados. | Imagens meramente ilustrativas</p>
 
+        <hr>
+
+        <div class="footerBlocks">
+
+            <div class="footerBlock">
+                <h4>TERMOS</h4>
+                <p><a href="">Política de Privacidade</a></p>
+                <p><a href="">Política de Cookies e Anúncios</a></p>
+                <p><a href="">Termos de Uso</a></p>
+            </div>
+
+            <div class="footerBlock">
+                <h4>MINHA CONTA</h4>
+                <p><a href="html/signin.html">Crie sua conta agora</a></p>
+                <p><a href="html/login.html">Já possui conta? Faça login</a></p>
+            </div>
+
+            <div class="footerBlock">
+                <h4>ATENDIMENTO AO CLIENTE</h4>
+                <p>Facebook: <a href="">PizzaNetRJ</a></p>
+                <p>Instagram: <a href="">@pizzanetrj</a></p>
+                <p>Twitter: <a href="">@pizzanetrj</a></p>
+            </div>
+
+        </div>
     </footer>
 
 
     <script>
+        /*MENU PARA ESCOLHER ENTRE DELIVERY E RETIRADA*/
         $(function ()
         {
-
-            /*MENU PARA ESCOLHER ENTRE DELIVERY E RETIRADA*/
             let cepBtn1 = $('#cepBtn1')
             let cepBtn2 = $('#cepBtn2')
             let cepD = $('.cepD')
@@ -107,7 +141,56 @@
                 cepD.css('display', 'none')
                 cepR.css('display', 'block')
             })
+        })
+    </script>
 
+    <script>
+        /*BOTÃO 'BUSCAR' MUDANDO DE COR*/
+        $(function ()
+        {
+            let cepWarning1 = $('#cepWarning1')
+            let cepWarning2 = $('#cepWarning2')
+            let buscar1 = $('#buscarBtn1')
+            let buscar2 = $('#buscarBtn2')
+            let cepDInput1 = $('#cepDInput1')
+            let cepDInput2 = $('#cepDInput2')
+            let cepRInput = $('#cepRInput')
+
+            $('body').mousemove(() =>
+            {
+                if (cepDInput1.val() != '' && cepDInput1.val().length == 8 && cepDInput2.val() != '')
+                {
+                    buscar1.addClass('redBtn')
+                }
+                else if (cepDInput1.val() != '' && cepDInput1.val().length < 8)
+                {
+                    buscar1.removeClass('redBtn')
+                    cepWarning1.css('display', 'block')
+                }
+                else
+                {
+                    buscar1.removeClass('redBtn')
+                    cepWarning1.css('display', 'none')
+                }
+            })
+
+            $('body').mousemove(() =>
+            {
+                if (cepRInput.val() != '' && cepRInput.val().length == 8)
+                {
+                    buscar2.addClass('redBtn')
+                }
+                else if (cepRInput.val() != '' && cepRInput.val().length < 8)
+                {
+                    buscar2.removeClass('redBtn')
+                    cepWarning2.css('display', 'block')
+                }
+                else
+                {
+                    buscar2.removeClass('redBtn')
+                    cepWarning2.css('display', 'none')
+                }
+            })
         })
     </script>
 </body>
