@@ -258,7 +258,7 @@ hr {
 
         width: 100vw;
         height: 100%;
-        top: 65px;
+        padding: 20px;
     }
 
     .cartMobilePopUp .closePopUp {
@@ -280,7 +280,7 @@ hr {
         position: absolute;
 
         left: 50%;
-        bottom: 100px;
+        bottom: 20px;
         width: 90vw;
         transform: translateX(-50%);
     }
