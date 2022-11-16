@@ -224,6 +224,23 @@
 
         </div>
 
+        <div class="cartMobile">
+            <button class="redBtn">Ver Carrinho 🛒</button>
+        </div>
+
+        <div class="cartMobilePopUp">
+            <h2>Seu Carrinho</h2>
+            <button class="closePopUp">X</button>
+
+            <hr>
+
+            <p class="empty">Seu carrinho está vazio</p>
+
+            <p class="tax">Taxa de entrega: R$00,00</p>
+
+            <button class="redBtn">Concluir Pedido</button>
+        </div>
+
     </main>
 
     <script>
@@ -252,6 +269,30 @@
                 sobremesas.css('display', 'flex')
             })
         })
+    </script>
+
+    <script>
+
+        /*POPUP DO CARRINHO NO CELULARL*/
+        $(function ()
+        {
+
+            let cartMobileBtn = $('.cartMobile button')
+            let cartMobilePopUp = $('.cartMobilePopUp')
+            let closePopUp = $('.closePopUp')
+
+            cartMobileBtn.click(() =>
+            {
+                cartMobilePopUp.css('display', 'flex')
+            })
+
+            closePopUp.click(() =>
+            {
+                cartMobilePopUp.css('display', 'none')
+            })
+
+        })
+
     </script>
 </body>
 

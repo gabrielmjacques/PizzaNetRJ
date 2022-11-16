@@ -105,6 +105,8 @@ nav {
 }
 
 .menuOptionCardInfo h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-size: 0.95em;
 }
 
@@ -133,18 +135,27 @@ nav {
 
 
 
+.cartMobile,
+.cartMobilePopUp {
+    display: none;
+}
 
-.cart {
-    position: fixed;
+.cart,
+.cartMobilePopUp {
     background-color: var(--cor2);
     color: white;
-    display: flex;
     flex-direction: column;
     position: relative;
 
+    padding: 5px;
+
+}
+
+.cart {
+    display: flex;
+
     right: 0px;
     width: 30vw;
-    padding: 5px;
 
     box-shadow: #00000041 -5px 0 20px;
 }
@@ -165,7 +176,7 @@ hr {
     margin: 20px auto;
 }
 
-.cart .empty {
+.empty {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
 
@@ -173,7 +184,7 @@ hr {
     font-size: 0.9em;
 }
 
-.cart .tax {
+.tax {
     color: #ffffffce;
 
     margin-top: 30px;
@@ -203,5 +214,69 @@ hr {
 @media (max-width: 768px) {
     .menuOptionCard {
         width: 49%;
+    }
+}
+
+@media (max-width: 425px) {
+    .content {
+        width: 100vw;
+    }
+
+    .menuOptionCardInfo h4 {
+        font-size: 0.8em;
+    }
+
+    .menuOptionCardInfo p {
+        font-size: 0.8em;
+    }
+
+    .cart {
+        display: none;
+    }
+
+    .cartMobile {
+        display: block;
+        position: fixed;
+
+        bottom: 0;
+        width: 100vw;
+    }
+
+    .cartMobile button {
+        margin: auto;
+        font-weight: bolder;
+
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cartMobilePopUp {
+        display: flex;
+        position: fixed;
+
+        width: 100vw;
+        height: 100%;
+        top: 65px;
+    }
+
+    .cartMobilePopUp .closePopUp {
+        position: absolute;
+        background-color: #ffffff0a;
+        color: white;
+        font-weight: bolder;
+
+        font-size: 1.5em;
+        width: 50px;
+        right: 30px;
+        transform: translateY(-25%);
+    }
+
+    .cartMobilePopUp .redBtn {
+        position: absolute;
+
+        left: 50%;
+        bottom: 100px;
+        width: 90vw;
+        transform: translateX(-50%);
     }
 }
