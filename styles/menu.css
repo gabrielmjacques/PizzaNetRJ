@@ -68,7 +68,7 @@ nav {
     justify-content: space-between;
     overflow: scroll;
 
-    height: 80%;
+    height: 75%;
     gap: 1%;
     padding: 10px;
 }
@@ -228,6 +228,7 @@ hr {
 
     .menuOptionCardInfo p {
         font-size: 0.8em;
+        height: 90px;
     }
 
     .cart {
