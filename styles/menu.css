@@ -19,6 +19,7 @@ main {
 
 .content {
     width: 70vw;
+    height: 78%;
 }
 
 nav {
@@ -68,9 +69,10 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
-    height: 75%;
+    height: 100%;
     gap: 1%;
     padding: 10px;
 }
@@ -172,7 +174,6 @@ nav {
 
 hr {
     color: #ffffff91;
-    border-style: dashed;
 
     width: 100%;
     margin: 20px auto;
@@ -222,6 +223,7 @@ hr {
 @media (max-width: 425px) {
     .content {
         width: 100vw;
+        height: 74%;
     }
 
     .menuOptionCardInfo h4 {

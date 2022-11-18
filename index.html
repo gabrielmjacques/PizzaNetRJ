@@ -16,7 +16,7 @@
     <header>
 
         <div class="row">
-            <img src="assets/logo.png" alt="">
+            <a href=""><img src="assets/logo.png" alt=""></a>
 
             <div class="login">
                 <a href="html/signin.html"><button>Cadastrar</button></a>
@@ -41,7 +41,10 @@
                     <p>Onde você quer que sua pizza seja entregue?</p>
 
                     <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
-                    <input type="number" name="cep" id="cepDInput1" placeholder="Insira seu CEP aqui">
+
+                    <input type="number" name="cep" id="cepDInput1" placeholder="Insira seu CEP aqui" maxlength="8"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
                     <p style="text-align: left; font-size: 0.8em; color: crimson; display: none;" id="cepWarning1">O
                         CEP parece estar incompleto</p>
 
@@ -53,7 +56,10 @@
                     <p>Diga onde você mora para encontrar uma de nossas unidade nas proximidades</p>
 
                     <label for="cep">Insira seu CEP e iremos encontrar a unidade mais próxima de você!</label>
-                    <input type="number" name="cep" id="cepRInput" placeholder="Insira seu CEP aqui">
+
+                    <input type="number" name="cep" id="cepRInput" placeholder="Insira seu CEP aqui" maxlength="8"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
                     <p style="text-align: left; font-size: 0.8em; color: crimson; display: none;" id="cepWarning2">O
                         CEP parece estar incompleto</p>
 
@@ -71,14 +77,15 @@
                     <img src="assets/banner1.png" alt="">
                     <img src="assets/banner2.png" alt="">
                 </div>
-                <a href="html/menu.html"><button>Ver Cardápio</button></a>
+
+                <a href="html/menu.html"><button>Conheça Nosso Cardápio</button></a>
             </div>
 
         </section>
     </main>
 
     <footer>
-        <p>Copyright © @2022 PIZZANETRJ LTDA. AVENIDA SUPER FAMOSA TAL Nº: 7070 – TIJUCA – RIO DE JANEIRO/RJ. Todos
+        <p>Copyright © @2022 PIZZANETRJ LTDA. AV. SUPER FAMOSA TAL Nº: 7070 – TIJUCA – RIO DE JANEIRO/RJ. Todos
             os direitos reservados. | Imagens meramente ilustrativas</p>
 
         <hr>
@@ -87,9 +94,9 @@
 
             <div class="footerBlock">
                 <h4>TERMOS</h4>
-                <p><a href="">Política de Privacidade</a></p>
-                <p><a href="">Política de Cookies e Anúncios</a></p>
-                <p><a href="">Termos de Uso</a></p>
+                <p><a href="html/error.html">Política de Privacidade</a></p>
+                <p><a href="html/error.html">Política de Cookies e Anúncios</a></p>
+                <p><a href="html/error.html">Termos de Uso</a></p>
             </div>
 
             <div class="footerBlock">
@@ -100,9 +107,9 @@
 
             <div class="footerBlock">
                 <h4>ATENDIMENTO AO CLIENTE</h4>
-                <p>Facebook: <a href="">PizzaNetRJ</a></p>
-                <p>Instagram: <a href="">@pizzanetrj</a></p>
-                <p>Twitter: <a href="">@pizzanetrj</a></p>
+                <p>Facebook: <a href="html/error.html">PizzaNetRJ</a></p>
+                <p>Instagram: <a href="html/error.html">@pizzanetrj</a></p>
+                <p>Twitter: <a href="html/error.html">@pizzanetrj</a></p>
             </div>
 
         </div>
@@ -156,11 +163,12 @@
             let cepDInput2 = $('#cepDInput2')
             let cepRInput = $('#cepRInput')
 
-            $('body').mousemove(() =>
+            $('body').keyup(() =>
             {
                 if (cepDInput1.val() != '' && cepDInput1.val().length == 8 && cepDInput2.val() != '')
                 {
                     buscar1.addClass('redBtn')
+                    cepWarning1.css('display', 'none')
                 }
                 else if (cepDInput1.val() != '' && cepDInput1.val().length < 8)
                 {
@@ -174,11 +182,12 @@
                 }
             })
 
-            $('body').mousemove(() =>
+            $('body').keyup(() =>
             {
                 if (cepRInput.val() != '' && cepRInput.val().length == 8)
                 {
                     buscar2.addClass('redBtn')
+                    cepWarning2.css('display', 'none')
                 }
                 else if (cepRInput.val() != '' && cepRInput.val().length < 8)
                 {

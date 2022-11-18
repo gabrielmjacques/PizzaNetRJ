@@ -108,6 +108,7 @@ section {
     background-position: center;
 
     height: 500px;
+    border-radius: 3%;
 }
 
 .cepMenu {
@@ -118,7 +119,12 @@ section {
     max-width: 600px;
     border-radius: 0 0 20px 20px;
 
-    box-shadow: #000000c2 0 10px 30px;
+    box-shadow: #000000e7 0 10px 50px;
+}
+
+.cepMenu p,
+.cepMenu label {
+    color: #111111;
 }
 
 .cepMenu p {
@@ -274,5 +280,11 @@ footer hr {
 
     .bannersCard img {
         width: 100%;
+    }
+
+    .bannersCard button {
+        width: 100%;
+        font-size: 1em;
+        margin: 30px auto;
     }
 }
