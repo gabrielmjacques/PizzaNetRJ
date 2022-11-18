@@ -6,10 +6,8 @@
     --cor5: #BF3617;
 }
 
-body {}
-
 main {
-    background-color: white;
+    background-color: #d6d6d6;
     display: flex;
 
     height: 100vh;
