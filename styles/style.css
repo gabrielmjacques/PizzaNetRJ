@@ -59,12 +59,11 @@ button {
 
     padding: 10px;
     width: 100%;
-    height: 15%;
 }
 
-.row a img {
-    width: 30%;
-    margin-left: 20px;
+.row img {
+    width: 170px;
+    margin-left: 40px;
 }
 
 .row .login {
