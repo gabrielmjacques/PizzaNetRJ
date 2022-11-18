@@ -62,9 +62,9 @@ button {
     height: 15%;
 }
 
-.row img {
-    width: 40%;
-    margin-left: 40px;
+.row a img {
+    width: 30%;
+    margin-left: 20px;
 }
 
 .row .login {
