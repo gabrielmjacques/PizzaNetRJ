@@ -59,10 +59,11 @@ button {
 
     padding: 10px;
     width: 100%;
+    height: 15%;
 }
 
 .row img {
-    width: 170px;
+    width: 40%;
     margin-left: 40px;
 }
 
