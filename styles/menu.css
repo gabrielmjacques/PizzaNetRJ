@@ -14,7 +14,7 @@ main {
 }
 
 .content {
-    width: 70vw;
+    width: 70%;
 }
 
 nav {
@@ -152,7 +152,7 @@ nav {
     position: fixed;
 
     right: 0px;
-    width: 30vw;
+    width: 30.3%;
     height: 100vh;
 
     box-shadow: #00000041 -5px 0 20px;
