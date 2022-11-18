@@ -6,9 +6,7 @@
     --cor5: #BF3617;
 }
 
-body {
-    overflow-y: hidden;
-}
+body {}
 
 main {
     background-color: white;
@@ -68,11 +66,10 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    overflow: scroll;
 
-    height: 75%;
     gap: 1%;
     padding: 10px;
+    padding-bottom: 50px;
 }
 
 .menuOptionCard {
@@ -155,9 +152,11 @@ nav {
 
 .cart {
     display: flex;
+    position: fixed;
 
     right: 0px;
     width: 30vw;
+    height: 100vh;
 
     box-shadow: #00000041 -5px 0 20px;
 }
